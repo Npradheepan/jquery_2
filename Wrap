@@ -1,0 +1,143 @@
+<div class="containerDiv">
+    <div id="div1">
+        DIV 1
+    </div>
+</div>
+<div class="containerDiv">
+    <div id="div2">
+        DIV 2
+    </div>
+</div>
+<div class="containerDiv">
+    <div id="div3">
+        DIV 3
+    </div>
+</div>
+
+Example : 
+<html>
+<head>
+    <title></title>
+    <style>
+        .containerDiv {
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            margin: 5px;
+        }
+    </style>
+    <script src="jquery-1.11.2.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            alert($('div.containerDiv').length);
+            $('div').wrap('<div class="containerDiv"></div>');
+            alert($('div.containerDiv').length);
+        });
+    </script>
+</head>
+<body style="font-family:Arial">
+    <div id="div1">
+        DIV 1
+    </div>
+    <div id="div2">
+        DIV 2
+    </div>
+    <div id="div3">
+        DIV 3
+    </div>
+</body>
+</html>
+-------------------------------------
+<html>
+<head>
+    <title></title>
+    <style>
+        .containerDiv {
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            margin: 5px;
+        }
+    </style>
+    <script src="jquery-1.11.2.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            alert($('div.containerDiv').length);
+            $('div').wrap('<div class="containerDiv"></div>');
+            alert($('div.containerDiv').length);
+            $('div').unwrap();
+            alert($('div.containerDiv').length);
+        });
+    </script>
+</head>
+<body style="font-family:Arial">
+    <div id="div1">
+        DIV 1
+    </div>
+    <div id="div2">
+        DIV 2
+    </div>
+    <div id="div3">
+        DIV 3
+    </div>
+</body>
+</html>
+
+wrapAll - Wrap an HTML structure around all elements in the set of matched elements.
+
+Consider the following HTML
+<div id="div1">
+    DIV 1
+</div>
+<div id="div2">
+    DIV 2
+</div>
+<div id="div3">
+    DIV 3
+</div>
+----------------------------
+<div class="containerDiv">
+    <div id="div1">
+        DIV 1
+    </div><div id="div2">
+        DIV 2
+    </div><div id="div3">
+        DIV 3
+    </div>
+</div>
+
+Example : 
+<html>
+<head>
+    <title></title>
+    <style>
+        .containerDiv {
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            margin: 5px;
+        }
+    </style>
+    <script src="jquery-1.11.2.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            alert($('div.containerDiv').length);
+            $('div').wrapAll('<div class="containerDiv"></div>');
+            alert($('div.containerDiv').length);
+            $('div').unwrap();
+            alert($('div.containerDiv').length);
+        });
+    </script>
+</head>
+<body style="font-family:Arial">
+    <div id="div1">
+        DIV 1
+    </div>
+    <div id="div2">
+        DIV 2
+    </div>
+    <div id="div3">
+        DIV 3
+    </div>
+</body>
+</html>

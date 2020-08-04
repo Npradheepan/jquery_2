@@ -1,0 +1,69 @@
+<html>
+<head>
+    <script src="jquery-1.11.2.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#myButton').click(function () {
+                $('#myDiv').animate({ 'font-size': '50' }, 2000);
+            });
+        });
+    </script>
+</head>
+<body style="font-family:Arial">
+    <input type="button" id="myButton" value="Animate" />
+    <br /><br />
+    <div id="myDiv">
+        jQuery animate function
+    </div>
+</body>
+</html>
+--------------------------------------------------------------
+<html>
+<head>
+    <script src="jquery-1.11.2.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#myImage').on({
+                mouseover: function () {
+                    $(this).animate({
+                        'height': 400,
+                        'width': 400,
+                    }, 3000);
+                },
+                mouseout: function () {
+                    $(this).animate({
+                        'height': 100,
+                        'width': 100,
+                    }, 3000);
+                }
+            });
+        });
+    </script>
+</head>
+<body style="font-family:Arial">
+    <img id="myImage" height="100" width="100" src="/Images/Tulips.jpg" />
+</body>
+</html>
+
+In the following example, several calls to animate() method are chained together. By default these calls are placed into a queue to be executed one after the other in series rather than executing all of them simultaneously in parallel.
+
+<html>
+<head>
+    <script src="jquery-1.11.2.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#myImage').click(function () {
+                $(this)
+                    .animate({ 'left': '300' })
+                    .animate({ 'top': '200' })
+                    .animate({ 'left': '10' })
+                    .animate({ 'top': '10' });
+            });
+        });
+    </script>
+</head>
+<body style="font-family:Arial">
+    <img id="myImage" height="100" width="100" style="position:absolute"
+         src="/Images/Tulips.jpg" />
+</body>
+</html>
